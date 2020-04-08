@@ -1,5 +1,7 @@
 # toutiao
 
+基于Vue2的头条Web APP
+
 ## Project setup
 ```
 yarn install
