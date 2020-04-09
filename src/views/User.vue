@@ -1,9 +1,8 @@
 <template>
     <div>
         <Header/>
-        <PageSlider/>
         <div>
-            <router-view></router-view>
+            My Info
         </div>
         <Footer/>
     </div>
@@ -11,12 +10,10 @@
 <script>
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import PageSlider from '../components/PageSlider.vue'
 export default {
     components:{
         Header,
-        Footer,
-        PageSlider
+        Footer
     }
 }
 </script>

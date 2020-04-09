@@ -1,22 +1,59 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Xigua from '../views/Xigua.vue'
+import Hot from '../views/Hot.vue'
+import Movie from '../views/Movie.vue'
+import User from '../views/User.vue'
+
+import HomeRecommand from '../views/pages/Recommand.vue'
+import UnknowPage from '../views/pages/UnknowPage.vue'
 
 Vue.use(VueRouter)
 
   const routes = [
+    {
+      path: '/',
+      redirect:'/home'
+    },
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
-    component: Home
+    component: Home,
+    children:[
+      {
+        path:'',
+        component:HomeRecommand
+      },
+      {
+        path:'recommand',
+        component:HomeRecommand
+      },
+      {
+        path:'unknow',
+        component:UnknowPage
+      }
+    ]
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/xigua',
+    name: 'Xigua',
+    component: Xigua
+  },
+  {
+    path: '/hot',
+    name: 'Hot',
+    component: Hot
+  },
+  {
+    path: '/movie',
+    name: 'Movie',
+    component: Movie
+  },
+  {
+    path: '/user',
+    name: 'User',
+    component: User
   }
 ]
 
