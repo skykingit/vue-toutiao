@@ -1,19 +1,19 @@
 <template>
     <div>
         <Header/>
-        <div>
-            Hot
-        </div>
+        <Undevelopment :pageTitle="'热搜'" />
         <Footer/>
     </div>
 </template>
 <script>
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Undevelopment from './pages/Undevelopment.vue'
 export default {
     components:{
         Header,
-        Footer
+        Footer,
+        Undevelopment
     }
 }
 </script>

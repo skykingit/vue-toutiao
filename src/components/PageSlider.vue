@@ -2,11 +2,11 @@
     <section class="pSliderArea">
         <div v-swiper:mySwiper="swiperOption" class="sArea">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" :key="bannerItem.name" v-for="bannerItem in banners">
-                    <router-link :to="bannerItem.router">
+                <div class="swiper-slide" :key="bannerItem.name" v-for="(bannerItem,index) in banners" :class="index == activeIndex?'activeNav':''" @click="switchNav(index)">
+                    <!-- <router-link :to="bannerItem.router" :class="index == activeIndex?'activeNav':''"> -->
                         {{bannerItem.name}}
                         <div class="activeLine"></div>
-                    </router-link>
+                    <!-- </router-link> -->
                 </div>
             </div>
         </div>
@@ -15,11 +15,10 @@
 </template>
 
 <script>
-import  APIList  from '../config/API.js'
+import {mapGetters,mapActions} from 'vuex'
   export default {
     data () {
       return {
-        banners: APIList.SecondaryMenuList,
         swiperOption: {
             freeMode:true,
             freeModeMomentumRatio:0.5,
@@ -27,6 +26,13 @@ import  APIList  from '../config/API.js'
         }
       }
     },
+    computed:mapGetters({
+        banners:'navListData',
+        activeIndex:'activeNavIndex'
+    }),
+    methods:mapActions([
+        'switchNav'
+    ]),
     mounted() {
       console.log('Current Swiper instance object', this.mySwiper)
     //   this.mySwiper.slideTo(3, 1000, false)
@@ -61,11 +67,11 @@ import  APIList  from '../config/API.js'
                 bottom: 0;
                 left:30%;
             }
-            .router-link-exact-active{
-                color: red;
-                .activeLine{
-                    border-top:1px solid red;
-                }
+        }
+        .activeNav{
+            color: red;
+            .activeLine{
+                border-top:1px solid red;
             }
         }
     }

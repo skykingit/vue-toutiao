@@ -6,9 +6,6 @@ import Hot from '../views/Hot.vue'
 import Movie from '../views/Movie.vue'
 import User from '../views/User.vue'
 
-import HomeRecommand from '../views/pages/Recommand.vue'
-import UnknowPage from '../views/pages/UnknowPage.vue'
-
 Vue.use(VueRouter)
 
   const routes = [
@@ -19,21 +16,7 @@ Vue.use(VueRouter)
   {
     path: '/home',
     name: 'Home',
-    component: Home,
-    children:[
-      {
-        path:'',
-        component:HomeRecommand
-      },
-      {
-        path:'recommand',
-        component:HomeRecommand
-      },
-      {
-        path:'unknow',
-        component:UnknowPage
-      }
-    ]
+    component: Home
   },
   {
     path: '/xigua',

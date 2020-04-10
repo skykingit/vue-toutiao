@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <router-link to="/home/recommand" class="fItem">
+        <router-link to="/home" class="fItem">
             <div class="fIconArea">
                 <img src="../assets/icon/home.svg" class="fIcon" alt=""> 
                 <img src="../assets/icon/homeHover.svg" class="activeIcon" alt="">

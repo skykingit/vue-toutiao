@@ -1,11 +1,20 @@
-//"推荐","抗击肺炎","小视频","热点","科技","健康","上海","在家上课","财经","军事","娱乐","文化","历史"
-const SecondaryMenuList = [
-    {"name":"关注",router:'/home/unknow'},
-    {"name":"推荐",router:'/home/recommand'},
-    {"name":"抗击肺炎",router:'/home/unknow'},
-    {"name":"小视频",router:'/home/unknow'}
+const NavMenuList = [
+    {"name":"关注"},
+    {"name":"推荐"},
+    {"name":"抗击肺炎"},
+    {"name":"小视频"},
+    {"name":"热点"},
+    {"name":"科技"},
+    {"name":"健康"},
+    {"name":"上海"},
+    {"name":"在家上课"},
+    {"name":"财经"},
+    {"name":"军事"},
+    {"name":"娱乐"},
+    {"name":"文化"},
+    {"name":"历史"}
 ]
 
 export default{
-    SecondaryMenuList
+    NavMenuList
 }
