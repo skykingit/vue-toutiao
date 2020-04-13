@@ -5,6 +5,7 @@ import Xigua from '../views/Xigua.vue'
 import Hot from '../views/Hot.vue'
 import Movie from '../views/Movie.vue'
 import User from '../views/User.vue'
+import Search from '../views/Search.vue'
 
 Vue.use(VueRouter)
 
@@ -37,6 +38,11 @@ Vue.use(VueRouter)
     path: '/user',
     name: 'User',
     component: User
+  },
+  {
+    path: '/search',
+    name: 'Search',
+    component: Search
   }
 ]
 

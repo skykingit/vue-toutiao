@@ -6,7 +6,10 @@
                     <img src="../assets/icon/search.svg" alt="Search">
                 </div>
                 <div class="recommandNews">
-                    新加坡宣布封国 | 央视回应追责索赔
+                    <router-link to="/search">
+                        新加坡宣布封国 | 央视回应追责索赔
+                    </router-link>
+                    
                 </div>
             </div>
             <div class="issue">
@@ -54,6 +57,10 @@ header{
             .recommandNews{
                 text-align: left;
                 padding-left: 30px;
+                a{
+                    color:black;
+                    text-decoration: none;
+                }
             }
         }
         .issue{
