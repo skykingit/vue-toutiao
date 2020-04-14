@@ -28,6 +28,7 @@
 header{
     position: fixed;
     top: 0;
+    z-index: 99999;
     height:40px;
     background-color: red;
     width: 100%;;
@@ -44,6 +45,7 @@ header{
             border-radius: 15px;
             line-height: 30px;
             font-size: 12px;
+            overflow: hidden;
             .searchIcon{
                 position: absolute;
                 top:0;
@@ -57,6 +59,7 @@ header{
             .recommandNews{
                 text-align: left;
                 padding-left: 30px;
+                background-color: white;
                 a{
                     color:black;
                     text-decoration: none;
